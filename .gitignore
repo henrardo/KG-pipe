@@ -1,0 +1,22 @@
+# Environment & secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (PDFs, patents — private)
+data/
+patents/
+patents_to_flag_pdf/
+
+# Claude Code
+.claude/
+
+# macOS
+.DS_Store
