@@ -20,7 +20,7 @@ A hands-on workshop for building knowledge graphs from unstructured data using t
 
 2. **Install dependencies:**
    ```bash
-   pip install "neo4j-graphrag[openai]" python-dotenv jupyterlab aiohttp beautifulsoup4 requests
+   pip install "neo4j-graphrag[openai]" python-dotenv jupyterlab aiohttp beautifulsoup4 requests pymupdf
    ```
 
 3. **Create a `.env` file** in the project root:
@@ -34,7 +34,13 @@ A hands-on workshop for building knowledge graphs from unstructured data using t
 
 4. **Add PDFs** to a `data/` folder in the project root (for Notebook 3).
 
-5. **Launch Jupyter:**
+5. **(Optional) Install Tesseract** for OCR support on scanned PDFs:
+   ```bash
+   brew install tesseract        # macOS
+   sudo apt install tesseract-ocr  # Linux
+   ```
+
+6. **Launch Jupyter:**
    ```bash
    jupyter lab
    ```
@@ -45,8 +51,9 @@ A hands-on workshop for building knowledge graphs from unstructured data using t
 |---|----------|-------------------|
 | 1 | [Setup & Connection](notebooks/01_setup_and_connection.ipynb) | Install deps, connect to Neo4j & OpenAI |
 | 2 | [KG from Text](notebooks/02_kg_from_text.ipynb) | Define a schema, extract entities from plain text |
-| 3 | [KG from PDFs](notebooks/03_kg_from_pdf.ipynb) | Process PDF files, manual vs auto schema |
+| 3 | [KG from PDFs](notebooks/03_kg_from_pdf.ipynb) | Extract text with PyMuPDF (+ OCR fallback), build KG |
 | 4 | [KG from Web](notebooks/04_kg_from_web.ipynb) | Load remote PDFs, build a custom `DataLoader` for web pages |
+| 5 | [Batch API](notebooks/05_kg_batch_api.ipynb) | Use OpenAI Batch API for 50% cheaper KG extraction |
 
 Work through them in order. Each notebook builds on concepts from the previous one.
 
