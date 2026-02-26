@@ -23,14 +23,11 @@ A hands-on workshop for building knowledge graphs from unstructured data using t
    pip install "neo4j-graphrag[openai]" python-dotenv jupyterlab aiohttp beautifulsoup4 requests pymupdf
    ```
 
-3. **Create a `.env` file** in the project root:
+3. **Create a `.env` file** in the project root (copy the example and fill in your values):
+   ```bash
+   cp .env.example .env
    ```
-   NEO4J_URI=neo4j+s://your-instance.databases.neo4j.io
-   NEO4J_USERNAME=neo4j
-   NEO4J_PASSWORD=your-password
-   NEO4J_DATABASE=neo4j
-   OPENAI_API_KEY=sk-your-key
-   ```
+   Then edit `.env` with your Neo4j Aura and OpenAI credentials.
 
 4. **Add PDFs** to a `data/` folder in the project root (for Notebook 3).
 
