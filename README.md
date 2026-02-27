@@ -37,11 +37,6 @@ A hands-on workshop for building knowledge graphs from unstructured data using t
    sudo apt install tesseract-ocr  # Linux
    ```
 
-6. **Launch Jupyter:**
-   ```bash
-   jupyter lab
-   ```
-
 ## Notebooks
 
 | # | Notebook | What you'll learn |
